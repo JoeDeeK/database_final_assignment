@@ -1,12 +1,39 @@
+#!bin/tcsh -f
+alias sql 'sqlplus -S s6_116/fall2016@aces'
 
-SPECIALTY IMPORTS VEHICLE SALES 
-
-Select one of the following options:
-
- a: Create a new customer
- b: Inquire a customer
- c: Create a vehicle inventory record
- d: Inquire a vehicle inventory record
- e: Create a new sales invoice
- f: Inquire a sales invoice
- x: Exit this program
+while (1 == 1)
+        clear
+        cat menu.txt
+        echo -n " Enter your option here: "
+        set option = $<
+        switch ( $option )
+            case [aA]:
+               sql @a.sql 
+               breaksw
+            case [bB]:
+               sql @b.sql
+               breaksw
+            case [cC]:
+               sql @c.sql 
+               breaksw
+            case [dD]:
+               sql @d.sql
+               breaksw
+            case [eE]:
+               sql @e.sql 
+               breaksw
+            case [fF]:
+               sql @f.sql
+               breaksw
+            case [qQxX]:
+               echo
+               exit
+               breaksw
+            case *:
+               echo "Invalid Option, please try again"
+               breaksw
+        endsw
+        echo
+        echo "Press any key to continue .....\c"
+        set dummy = $<
+end

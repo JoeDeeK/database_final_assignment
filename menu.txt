@@ -1,0 +1,12 @@
+
+SPECIALTY IMPORTS VEHICLE SALES 
+
+Select one of the following options:
+
+ a: Create a new customer
+ b: Inquire a customer
+ c: Create a vehicle inventory record
+ d: Inquire a vehicle inventory record
+ e: Create a new sales invoice
+ f: Inquire a sales invoice
+ x: Exit this program
